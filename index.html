@@ -1,40 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Land Records - UT Administration of Ladakh</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Certificate Document Viewer</title>
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         html, body {
             width: 100%;
             min-height: 100%;
-            background-color: #ffffff;
+            background: #ffffff;
         }
+
         body {
             display: flex;
             justify-content: center;
             align-items: flex-start;
+            overflow-x: hidden;
         }
+
         .document-container {
             width: 100%;
             max-width: 800px;
+            min-height: 100vh;
+            padding-top: 180px;
             background: #ffffff;
         }
+
         .document-container img {
+            display: block;
             width: 100%;
             height: auto;
-            display: block;
+            object-fit: contain;
+        }
+
+        @media (max-width: 600px) {
+            .document-container {
+                padding-top: 180px;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div class="document-container">
-        <img src="Certificate.png" alt="Document Verification">
-    </div>
+
+    <main class="document-container">
+        <img src="Certificate.png"
+             alt="Certificate document">
+    </main>
+
 </body>
 </html>
